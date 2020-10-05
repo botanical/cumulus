@@ -80,6 +80,12 @@ variable "tea_api_egress_log_group" {
   default     = null
 }
 
+variable "tea_egress_lambda_name" {
+  description = "Thin Egress App Egress Lambda name"
+  type        = string
+  default     = null
+}
+
 variable "tea_external_api_endpoint" {
   description = "Thin Egress App external endpoint URL"
   type        = string
@@ -94,12 +100,6 @@ variable "tea_rest_api_id" {
 
 variable "tea_rest_api_root_resource_id" {
   description = "Thin Egress App API gateway root resource ID"
-  type        = string
-  default     = null
-}
-
-variable "tea_stack_name" {
-  description = "Thin Egress App Cloudformation stack name"
   type        = string
   default     = null
 }

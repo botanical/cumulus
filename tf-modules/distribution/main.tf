@@ -5,7 +5,7 @@ terraform {
 }
 
 locals {
-  lambda_log_group_name  = "/aws/lambda/${var.tea_stack_name}-EgressLambda"
+  lambda_log_group_name  = "/aws/lambda/${var.tea_egress_lambda_name}"
   tea_buckets            = concat(var.protected_buckets, var.public_buckets)
 
   built_lambda_source_file = "${path.module}/lambda.zip"
